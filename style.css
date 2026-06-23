@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #182018;
+  background: linear-gradient(
+    135deg,
+    #e53935 0%,
+    #fdd835 24%,
+    #ec407a 48%,
+    #fb8c00 72%,
+    #43a047 100%
+  );
+}
+
+.mesa {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.panel-juego {
+  width: min(900px, 100%);
+  padding: 24px;
+  border-radius: 8px;
+  background: #f5f1e6;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+.mensaje {
+  min-height: 24px;
+  color: #4b5a4d;
+  font-weight: bold;
+  text-align: right;
+}
+
+.zona-mano {
+  margin-top: 22px;
+}
+
+.titulo-mano {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.cartas {
+  min-height: 125px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid rgba(13, 107, 61, 0.25);
+  border-radius: 8px;
+  background: rgba(13, 107, 61, 0.12);
+}
+
+.carta {
+  width: 76px;
+  height: 102px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #d8d1c0;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #182018;
+  font-size: 1.3rem;
+  font-weight: bold;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carta.roja {
+  color: #b3261e;
+}
+
+.carta.oculta {
+  border-color: #111827;
+  background: #263238;
+  color: #ffffff;
+}
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+button {
+  min-width: 140px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #1f2937;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #111827;
+}
+
+button:disabled {
+  background: #8b938c;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .mesa {
+    padding: 12px;
+  }
+
+  .panel-juego {
+    padding: 18px;
+  }
+
+  .encabezado,
+  .titulo-mano {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mensaje {
+    text-align: left;
+  }
+
+  .carta {
+    width: 64px;
+    height: 88px;
+    font-size: 1.05rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}

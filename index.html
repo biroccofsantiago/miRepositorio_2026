@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>67 BLACKJACK CIATA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="mesa">
+    <section class="panel-juego">
+      <header class="encabezado">
+        <h1>67 BLACKJACK CIATA</h1>
+        <p id="mensaje" class="mensaje">Presiona "Pedir carta" para comenzar.</p>
+      </header>
+
+      <section class="zona-mano">
+        <div class="titulo-mano">
+          <h2>Dealer</h2>
+          <p>Puntaje: <strong id="puntaje-dealer">0</strong></p>
+        </div>
+        <div id="cartas-dealer" class="cartas"></div>
+      </section>
+
+      <section class="zona-mano">
+        <div class="titulo-mano">
+          <h2>Jugador</h2>
+          <p>Puntaje: <strong id="puntaje-jugador">0</strong></p>
+        </div>
+        <div id="cartas-jugador" class="cartas"></div>
+      </section>
+
+      <div class="controles">
+        <button id="btn-pedir" type="button">Pedir carta</button>
+        <button id="btn-plantarse" type="button">Plantarse</button>
+        <button id="btn-reiniciar" type="button">Reiniciar</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
